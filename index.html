@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geberit - Lead Qualification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question {
+            display: none;
+        }
+        
+        .question.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nützliche Informationen für Ihr neues Badezimmer</h1>
+
+
+        <p>Als Geberit Gruppe sind wir europäischer Marktführer für Sanitärprodukte. Im Jahr 2024 feiern wir unser 150-jähriges Bestehen. Geberit verfügt über eine starke lokale Präsenz mit einem erfahrenen Partnernetzwerk und kann dadurch sowohl auf dem
+            Gebiet der Sanitärtechnik als auch im Bereich der Badezimmerkeramiken einzigartige Mehrwerte bieten.</p>
+        <p>Unser Ziel ist es Sie bei Ihren Badezimmerprojekt so zu unterstützen, dass Sie lange zeit damit glücklich sind.</p>
+
+        <p style="font-weight: bold;">Die folgenden 4 schnell zu beantwortenden Fragen helfen uns dabei Ihre aktuellen Bedürfnisse und Interessen besser zu verstehen damit wir Ihnen die bestmögliche Unterstützung bieten können.</p>
+
+        <div id="question1" class="question active">
+            <h2>Frage 1/4:</h2>
+            <p>Wie vertraut sind Sie mit den Produkten und Dienstleistungen für Badezimmer und Sanitärlösungen?</p>
+            <div class="form-group">
+                <input type="radio" name="q1" value="Awareness" id="q1a1"> <label for="q1a1">Ich habe gerade erst angefangen mich damit zu beschäftigen.</label><br>
+                <input type="radio" name="q1" value="Consideration" id="q1a2"> <label for="q1a2">Ich habe einige Marken und Produkte recherchiert.</label><br>
+                <input type="radio" name="q1" value="Consideration" id="q1a3"> <label for="q1a3">Ich habe mich intensiv über verschiedene Optionen informiert.</label><br>
+                <input type="radio" name="q1" value="Preparation" id="q1a4"> <label for="q1a4">Ich habe bereits eine spezifische Marke oder ein Produkt im Auge.</label><br>
+                <input type="radio" name="q1" value="Planning" id="q1a5"> <label for="q1a5">Ich habe kürzlich ein Produkt gekauft und plane die Installation.</label><br>
+                <input type="radio" name="q1" value="Installation" id="q1a6"> <label for="q1a6">Ich bin dabei ein Produkt zu installieren.</label><br>
+                <input type="radio" name="q1" value="Use" id="q1a7"> <label for="q1a7">Ich nutze bereits neue Badezimmerprodukte und möchte mehr erfahren.</label>
+            </div>
+            <button class="btn btn-primary" onclick="nextQuestion(1)">Weiter</button>
+        </div>
+
+        <div id="question2" class="question">
+            <h2>Frage 2/4:</h2>
+            <p>Welche der folgenden Aussagen beschreibt am besten Ihre aktuelle Situation?</p>
+            <div class="form-group">
+                <input type="radio" name="q2" value="Awareness" id="q2a1"> <label for="q2a1">Ich suche allgemeine Informationen und Inspirationen für mein Badezimmer.</label><br>
+                <input type="radio" name="q2" value="Consideration" id="q2a2"> <label for="q2a2">Ich vergleiche verschiedene Produkte und Marken.</label><br>
+                <input type="radio" name="q2" value="Preparation" id="q2a3"> <label for="q2a3">Ich benötige detaillierte Informationen zu bestimmten Produkten.</label><br>
+                <input type="radio" name="q2" value="Planning" id="q2a4"> <label for="q2a4">Ich plane den Kauf eines bestimmten Produkts und suche nach Details.</label><br>
+                <input type="radio" name="q2" value="Purchase" id="q2a5"> <label for="q2a5">Ich bin bereit ein Produkt zu kaufen und benötige Unterstützung bei der Abwicklung.</label><br>
+                <input type="radio" name="q2" value="Installation" id="q2a6"> <label for="q2a6">Ich brauche Hilfe bei der Installation eines kürzlich gekauften Produkts.</label><br>
+                <input type="radio" name="q2" value="Use" id="q2a7"> <label for="q2a7">Ich habe Fragen oder benötige Unterstützung bei einem installierten Produkt.</label>
+            </div>
+            <button class="btn btn-primary" onclick="nextQuestion(2)">Weiter</button>
+        </div>
+
+        <div id="question3" class="question">
+            <h2>Frage 3/4:</h2>
+            <p>Was ist Ihr aktueller Fokus bei Ihrem Badezimmerprojekt?</p>
+            <div class="form-group">
+                <input type="radio" name="q3" value="Awareness" id="q3a1"> <label for="q3a1">Ich sammle Ideen und Inspirationen.</label><br>
+                <input type="radio" name="q3" value="Consideration" id="q3a2"> <label for="q3a2">Ich schaue mir verschiedene Optionen an und vergleiche sie.</label><br>
+                <input type="radio" name="q3" value="Preparation" id="q3a3"> <label for="q3a3">Ich recherchiere intensiv um die beste Wahl zu treffen.</label><br>
+                <input type="radio" name="q3" value="Planning" id="q3a4"> <label for="q3a4">Ich habe konkrete Pläne und suche nach dem passenden Produkt.</label><br>
+                <input type="radio" name="q3" value="Purchase" id="q3a5"> <label for="q3a5">Ich bin bereit eine Kaufentscheidung zu treffen.</label><br>
+                <input type="radio" name="q3" value="Installation" id="q3a6"> <label for="q3a6">Ich organisiere gerade die Installation meines neuen Produkts.</label><br>
+                <input type="radio" name="q3" value="Use" id="q3a7"> <label for="q3a7">Ich habe mein Projekt abgeschlossen und nutze die neuen Einrichtungen.</label>
+            </div>
+            <button class="btn btn-primary" onclick="nextQuestion(3)">Weiter</button>
+        </div>
+
+        <div id="question4" class="question">
+            <h2>Frage 4/4:</h2>
+            <p>Wie können wir Ihnen derzeit am besten helfen?</p>
+            <div class="form-group">
+                <input type="radio" name="q4" value="Awareness" id="q4a1"> <label for="q4a1">Mit allgemeinen Informationen und Inspirationen.</label><br>
+                <input type="radio" name="q4" value="Consideration" id="q4a2"> <label for="q4a2">Mit Vergleichsinformationen zu verschiedenen Produkten.</label><br>
+                <input type="radio" name="q4" value="Preparation" id="q4a3"> <label for="q4a3">Mit detaillierten Produktinformationen und Spezifikationen.</label><br>
+                <input type="radio" name="q4" value="Planning" id="q4a4"> <label for="q4a4">Mit Beratung zur Produktauswahl und Planung.</label><br>
+                <input type="radio" name="q4" value="Purchase" id="q4a5"> <label for="q4a5">Mit Unterstützung beim Kauf und der Abwicklung.</label><br>
+                <input type="radio" name="q4" value="Installation" id="q4a6"> <label for="q4a6">Mit Hilfe bei der Installation und Einrichtung.</label><br>
+                <input type="radio" name="q4" value="Use" id="q4a7"> <label for="q4a7">Mit Kundensupport für ein installiertes Produkt.</label>
+            </div>
+            <button class="btn btn-primary" onclick="showResults()">Ergebnisse anzeigen</button>
+        </div>
+
+        <div id="results" class="question">
+            <h2>Ergebnisse</h2>
+            <p>Basierend auf Ihren Antworten befinden Sie sich in der Phase:</p>
+            <h3 id="resultPhase"></h3>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+
+        function nextQuestion(questionNumber) {
+            document.getElementById('question' + questionNumber).classList.remove('active');
+            document.getElementById('question' + (questionNumber + 1)).classList.add('active');
+            currentQuestion++;
+        }
+
+        function showResults() {
+            let phases =
+
+                [];
+            for (let i = 1; i <= 4; i++) {
+                const options = document.getElementsByName('q' + i);
+                for (const option of options) {
+                    if (option.checked) {
+                        phases.push(option.value);
+                        break;
+                    }
+                }
+            }
+
+            let phaseCounts = phases.reduce((acc, phase) => {
+                acc[phase] = (acc[phase] || 0) + 1;
+                return acc;
+            }, {});
+
+            let sortedPhases = Object.keys(phaseCounts).sort((a, b) => phaseCounts[b] - phaseCounts[a]);
+            let dominantPhase = sortedPhases[0];
+
+            document.getElementById('question' + currentQuestion).classList.remove('active');
+            document.getElementById('results').classList.add('active');
+            document.getElementById('resultPhase').innerText = dominantPhase;
+        }
+    </script>
+</body>
+
+</html>
